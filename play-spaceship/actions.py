@@ -15,7 +15,9 @@ def _start_game():
     subprocess.run(["python3", os.path.join(GAME_PATH, "game", "__main__.py")])
 
 
-def hold(seconds: float, key: Optional[str] = None, thought: str = ""):
+def hold(seconds: float, key: Optional[str] = None):
+    if key=="thrust":
+        key="up"
     _hold(seconds, key)
 
 

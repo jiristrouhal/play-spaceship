@@ -30,6 +30,7 @@ available_actions = {
 
 
 messages = [
+    {"role": "user", "content": "Land the rocket."},
     {"role": "system", "content": system_prompt}
 ]
 
@@ -38,17 +39,28 @@ play()
 time.sleep(0.5)
 while game_running():
     response = generate_text_with_conversation(messages)
+
+    print("Response: ", response)
+
     json_functions = extract_json_func(response)
     state = read_state()
+    if state and not state["running"]:
+        hold(0.1, "esc")
+        break
     function_result_message = f"Check: {state}"
     messages.append({"role": "system", "content": function_result_message})
     print("Check: ", function_result_message)
 
     if json_functions:
+        if not "function_name" in json_functions[0] or not "function_params" in json_functions[0]:
+            continue
         function_name = json_functions[0]["function_name"]
         function_params = json_functions[0]["function_params"]
         if function_name not in available_actions:
             raise Exception(f"Unknown action: {function_name}: {function_params}")
-        print(f"Running {function_name} with params: {function_params}")
+
+        msg = f"Running {function_name} with params: {function_params}"
+        print(msg)
+        messages.append({"role": "system", "content": msg})
         action_function = available_actions[function_name]
         result = action_function(**function_params)
