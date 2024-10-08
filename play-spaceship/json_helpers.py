@@ -2,7 +2,7 @@ import re
 import json
 
 
-def extract_json(text_response):
+def extract_json_func(text_response):
     pattern = r'\{.*?\}'
     matches = re.finditer(pattern, text_response, re.DOTALL)
     json_objects = []

@@ -15,24 +15,34 @@ def _start_game():
     subprocess.run(["python3", os.path.join(GAME_PATH, "game", "__main__.py")])
 
 
-def hold(seconds: float, key: Optional[str] = None):
-    if key:
-        pyautogui.keyDown(key)
-    time.sleep(seconds)
-    if key:
-        pyautogui.keyUp(key)
+def hold(seconds: float, key: Optional[str] = None, thought: str = ""):
+    _hold(seconds, key)
 
 
 def game_running():
     return _game_thread.is_alive()
 
 
-def read_current_state() -> None | dict:
+def _read_state() -> None | list:
     file_path = os.path.join(GAME_PATH, "game", "current_state.json")
-    if not os.path.exists(file_path):
+    try:
+        with open(file_path, "r") as file:
+            state = json.loads(file.read())
+            return state
+    except FileNotFoundError:
         return None
-    with open(file_path, "r") as file:
-        return json.loads(file.read())
+    except json.JSONDecodeError:
+        return None
+    except Exception:
+        raise Exception("Unknown error occurred while reading the current state.")
+
+
+def read_state():
+    state = _read_state()
+    while not state:
+        state = _read_state()
+        time.sleep(0.01)
+    return state
 
 
 _game_thread = threading.Thread(target=_start_game)
@@ -42,5 +52,10 @@ def play():
     _game_thread.start()
 
 
-
+def _hold(seconds: float, key: Optional[str] = None):
+    if key:
+        pyautogui.keyDown(key)
+    time.sleep(seconds)
+    if key:
+        pyautogui.keyUp(key)
 
