@@ -16,7 +16,7 @@ def _start_game():
 
 
 def hold(seconds: float, key: Optional[str] = None):
-    if key=="thrust":
+    if key=="forward":
         key="up"
     _hold(seconds, key)
 

@@ -9,9 +9,6 @@ from actions import play, hold, read_state, game_running
 from json_helpers import extract_json_func
 
 
-DT = 0.1
-
-
 load_dotenv()
 openai_client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -35,8 +32,23 @@ messages = [
 ]
 
 
+def get_orientation(angle):
+
+    if -135 <= angle <= -45:
+        return "right"
+    elif -45 < angle <= 45:
+        return "up"
+    elif 45 < angle <= 135:
+        return "left"
+    else:
+        return "down"
+
+
+
 play()
 time.sleep(0.5)
+
+
 while game_running():
     response = generate_text_with_conversation(messages)
 
@@ -44,6 +56,7 @@ while game_running():
 
     json_functions = extract_json_func(response)
     state = read_state()
+    state["orientation"] = get_orientation(float(state["angle"]))
     if state and not state["running"]:
         hold(0.1, "esc")
         break
