@@ -135,3 +135,91 @@ Time: 2024-10-09 12:42:58, Fuel: 909.00, Speed: 7.66, Height: 2.00, Crash!
 Time: 2024-10-09 12:43:14, Fuel: 932.00, Speed: 7.24, Height: 2.00, Crash!
 Time: 2024-10-09 12:43:51, Fuel: 901.00, Speed: 6.12, Height: 2.00, Crash!
 Time: 2024-10-09 12:44:56, Fuel: 275.00, Speed: 1.42, Height: 2.00, Crash!
+Time: 2024-10-15 09:20:14, Fuel: 956.00, Speed: 54.00, Height: 2.00, Crash!
+Time: 2024-10-15 09:27:26, Fuel: 1000.00, Speed: 95.20, Height: 1.00, Crash!
+Time: 2024-10-15 09:28:43, Fuel: 1000.00, Speed: 95.10, Height: 2.00, Crash!
+Time: 2024-10-15 09:30:45, Fuel: 1000.00, Speed: 95.10, Height: 2.00, Crash!
+Time: 2024-10-15 09:32:05, Fuel: 736.00, Speed: 38.00, Height: 2.00, Crash!
+Time: 2024-10-15 21:07:27, Fuel: 1000.00, Speed: 95.10, Height: 2.00, Crash!
+Time: 2024-10-15 21:10:26, Fuel: 1000.00, Speed: 95.10, Height: 2.00, Crash!
+Time: 2024-10-15 21:12:20, Fuel: 1000.00, Speed: 95.10, Height: 2.00, Crash!
+Time: 2024-10-15 21:32:45, Fuel: 0.00, Speed: 67.73, Height: 2.00, Crash!
+Time: 2024-10-15 21:33:25, Fuel: 0.00, Speed: 62.80, Height: 2.00, Crash!
+Time: 2024-10-15 21:33:57, Fuel: 903.00, Speed: 50.50, Height: 2.00, Crash!
+Time: 2024-10-15 21:36:28, Fuel: 898.00, Speed: 72.92, Height: 2.00, Crash!
+Time: 2024-10-15 21:36:41, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-15 21:37:59, Fuel: 877.00, Speed: 67.87, Height: 2.00, Crash!
+Time: 2024-10-15 21:38:39, Fuel: 956.00, Speed: 87.05, Height: 2.00, Crash!
+Time: 2024-10-15 21:39:11, Fuel: 505.00, Speed: 26.68, Height: 2.00, Crash!
+Time: 2024-10-15 21:39:38, Fuel: 502.00, Speed: 28.67, Height: 2.00, Crash!
+Time: 2024-10-15 21:39:48, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-15 21:40:03, Fuel: 837.00, Speed: 58.33, Height: 2.00, Crash!
+Time: 2024-10-15 21:40:42, Fuel: 108.00, Speed: 8.37, Height: 2.00, You missed the landing site!
+Time: 2024-10-15 21:43:33, Fuel: 925.00, Speed: 79.47, Height: 2.00, Crash!
+Time: 2024-10-15 21:46:43, Fuel: 848.00, Speed: 79.09, Height: 2.00, Crash!
+Time: 2024-10-15 21:47:27, Fuel: 623.00, Speed: 52.22, Height: 2.00, Crash!
+Time: 2024-10-15 21:49:21, Fuel: 732.00, Speed: 65.11, Height: 2.00, Crash!
+Time: 2024-10-15 21:50:43, Fuel: 680.00, Speed: 58.92, Height: 2.00, Crash!
+Time: 2024-10-15 21:51:18, Fuel: 147.00, Speed: 22.64, Height: 2.00, Crash!
+Time: 2024-10-15 21:51:46, Fuel: 555.00, Speed: 44.30, Height: 2.00, Crash!
+Time: 2024-10-15 21:52:22, Fuel: 416.00, Speed: 28.41, Height: 2.00, Crash!
+Time: 2024-10-15 21:54:35, Fuel: 152.00, Speed: 19.33, Height: 2.00, Crash!
+Time: 2024-10-15 21:55:28, Fuel: 560.00, Speed: 23.03, Height: 2.00, Crash!
+Time: 2024-10-15 21:55:47, Fuel: 718.00, Speed: 30.78, Height: 2.00, Crash!
+Time: 2024-10-15 21:56:12, Fuel: 561.00, Speed: 27.58, Height: 2.00, Crash!
+Time: 2024-10-15 21:57:09, Fuel: 558.00, Speed: 15.80, Height: 2.00, Crash!
+Time: 2024-10-15 21:58:12, Fuel: 0.00, Speed: 105.17, Height: 2.00, Crash!
+Time: 2024-10-15 21:59:05, Fuel: 372.00, Speed: 15.10, Height: 2.00, Crash!
+Time: 2024-10-15 21:59:55, Fuel: 601.00, Speed: 10.88, Height: 2.00, Crash!
+Time: 2024-10-15 22:00:24, Fuel: 0.00, Speed: 29.70, Height: 2.00, Crash!
+Time: 2024-10-15 22:01:22, Fuel: 0.00, Speed: 19.73, Height: 2.00, Crash!
+Time: 2024-10-15 22:02:09, Fuel: 188.00, Speed: 13.73, Height: 2.00, Crash!
+Time: 2024-10-15 22:02:53, Fuel: 630.00, Speed: 15.53, Height: 2.00, Crash!
+Time: 2024-10-15 22:03:23, Fuel: 0.00, Speed: 28.97, Height: 2.00, Crash!
+Time: 2024-10-15 22:04:19, Fuel: 626.00, Speed: 16.30, Height: 2.00, You missed the landing site!
+Time: 2024-10-15 22:04:46, Fuel: 555.00, Speed: 9.10, Height: 2.00, You missed the landing site!
+Time: 2024-10-15 22:05:30, Fuel: 628.00, Speed: 20.73, Height: 2.00, Crash!
+Time: 2024-10-16 07:04:40, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 07:06:40, Fuel: 555.00, Speed: 34.85, Height: 2.00, Crash!
+Time: 2024-10-16 07:08:41, Fuel: 555.00, Speed: 21.58, Height: 2.00, Crash!
+Time: 2024-10-16 07:09:59, Fuel: 381.00, Speed: 19.75, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 07:10:54, Fuel: 557.00, Speed: 22.12, Height: 2.00, Crash!
+Time: 2024-10-16 07:12:27, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 07:12:52, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 07:13:31, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 07:14:20, Fuel: 361.00, Speed: 18.53, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 07:15:09, Fuel: 563.00, Speed: 20.98, Height: 2.00, Crash!
+Time: 2024-10-16 07:15:23, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 07:15:40, Fuel: 512.00, Speed: 11.22, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 08:09:44, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:11:34, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:18:35, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:21:30, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:24:02, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:28:08, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:31:40, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:41:26, Fuel: 779.00, Speed: 44.77, Height: 2.00, Crash!
+Time: 2024-10-16 08:42:40, Fuel: 560.00, Speed: 35.03, Height: 2.00, Crash!
+Time: 2024-10-16 08:43:26, Fuel: 736.00, Speed: 34.88, Height: 2.00, Crash!
+Time: 2024-10-16 08:43:51, Fuel: 560.00, Speed: 16.30, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 08:46:24, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:46:57, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:47:18, Fuel: 692.00, Speed: 24.92, Height: 2.00, Crash!
+Time: 2024-10-16 08:48:06, Fuel: 1000.00, Speed: 97.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:49:22, Fuel: 973.00, Speed: 91.27, Height: 2.00, Crash!
+Time: 2024-10-16 08:49:49, Fuel: 559.00, Speed: 43.42, Height: 2.00, Crash!
+Time: 2024-10-16 08:51:38, Fuel: 889.00, Speed: 70.73, Height: 2.00, Crash!
+Time: 2024-10-16 08:53:05, Fuel: 0.00, Speed: 39.45, Height: 2.00, Crash!
+Time: 2024-10-16 08:54:31, Fuel: 1159.00, Speed: 25.71, Height: 2.00, Crash!
+Time: 2024-10-16 08:59:19, Fuel: 983.33, Speed: 85.49, Height: 2.00, Crash!
+Time: 2024-10-16 09:03:55, Fuel: 857.56, Speed: 40.14, Height: 2.00, Crash!
+Time: 2024-10-16 09:05:25, Fuel: 859.11, Speed: 35.09, Height: 2.00, Crash!
+Time: 2024-10-16 09:06:14, Fuel: 712.44, Speed: 17.36, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 09:07:28, Fuel: 720.67, Speed: 10.10, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 09:09:04, Fuel: 855.56, Speed: 28.60, Height: 2.00, Crash!
+Time: 2024-10-16 09:09:50, Fuel: 714.22, Speed: 15.24, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 09:10:52, Fuel: 859.33, Speed: 27.76, Height: 2.00, Crash!
+Time: 2024-10-16 09:11:40, Fuel: 840.22, Speed: 25.24, Height: 2.00, Crash!
+Time: 2024-10-16 09:12:15, Fuel: 809.33, Speed: 12.17, Height: 2.00, You missed the landing site!
+Time: 2024-10-16 09:17:19, Fuel: 784.44, Speed: 23.93, Height: 2.00, Crash!
+Time: 2024-10-16 09:18:42, Fuel: 778.22, Speed: 11.97, Height: 2.00, You missed the landing site!
