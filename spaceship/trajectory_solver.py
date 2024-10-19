@@ -1,7 +1,7 @@
 from __future__ import annotations
 import dataclasses
 from typing import Callable
-from math import cos, sin
+from math import cos, sin, radians
 
 import scipy.optimize as opt
 
@@ -35,6 +35,9 @@ class VariableMultiset:
     @property
     def n_sets(self) -> int:
         return len(self._variables)
+
+    def __iter__(self):
+        return iter(self._variables)
 
     def to_list(self) -> list[float]:
         return [var for v in self._variables for var in v.to_list()]
@@ -73,25 +76,46 @@ def segment(index: int, variables: VariableMultiset, g: float) -> list[float]:
     i = index
     v1 = variables._variables[i]
     v0 = variables._variables[i - 1]
-    ax = -sin(v1.k) * v1.b
-    ay = cos(v1.k) * (v1.b - g)
+    r, v = movement(Vector2(v0.rx, v0.ry), Vector2(v0.vx, v0.vy), v1.b, g, v1.k, v1.dt)
     return [
-        v1.vx - (v0.vx + ax * v1.dt),
-        v1.vy - (v0.vy + ay * v1.dt),
-        v1.rx - (v0.rx + v0.vx * v1.dt + ax * v1.dt**2 / 2),
-        v1.ry - (v0.ry + v0.vy * v1.dt + ay * v1.dt**2 / 2),
+        v1.rx - r.x,
+        v1.ry - r.y,
+        v1.vx - v.x,
+        v1.vy - v.y,
     ]
+
+
+@dataclasses.dataclass
+class Vector2:
+    x: float
+    y: float
+
+
+def movement(
+    r0: Vector2, v0: Vector2, b: float, g: float, k: float, t: float
+) -> tuple[Vector2, Vector2]:
+    k_rad = radians(k)
+    ax = -sin(k_rad) * b
+    ay = cos(k_rad) * (b - g)
+    v1 = Vector2(v0.x + ax * t, v0.y + ay * t)
+    r1 = Vector2(
+        r0.x + v0.x * t + 0.5 * ax * t**2,
+        r0.y + v0.y * t + 0.5 * ay * t**2,
+    )
+    return r1, v1
 
 
 def system(
     invars: list[float],
     n_segments: int,
-    constraints: Callable[[VariableMultiset], list[float]],
     g: float,
+    *constraints: Callable[[VariableMultiset], list[float]],
 ) -> list[float]:
 
     variables = VariableMultiset().from_list(invars, n_segments + 1)
-    outvars = [*constraints(variables)]
+    outvars = []
+    for c in constraints:
+        outvars.extend(c(variables))
     for i in range(n_segments):
         outvars.extend(segment(i + 1, variables, g))
     return outvars
@@ -108,13 +132,18 @@ def initialize_variable_multiset(n_segments: int) -> VariableMultiset:
 def construct_trajectory(
     n_segments: int,
     starting_values: VariableMultiset,
-    constraints: Callable[[VariableMultiset], list[float]],
     g: float,
+    *constraints: Callable[[VariableMultiset], list[float]],
 ) -> VariableMultiset:
 
     result = opt.fsolve(
         system,
         starting_values.to_list(),
-        args=(n_segments, constraints, g),
+        args=(n_segments, g, *constraints),
+        full_output=True,
     )
-    return VariableMultiset.from_list(result, n_segments + 1)
+    print(result[-1])
+    var_multiset = VariableMultiset().from_list(result[0], n_segments + 1)
+    for i in range(var_multiset.n_sets):
+        var_multiset[i].k = var_multiset[i].k % 360
+    return var_multiset
