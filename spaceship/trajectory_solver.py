@@ -6,7 +6,7 @@ from math import cos, sin
 import scipy.optimize as opt
 
 
-@dataclasses.dataclass(frozen=True)
+@dataclasses.dataclass()
 class VariableSet:
     vx: float = 0
     vy: float = 0
@@ -83,34 +83,24 @@ def segment(index: int, variables: VariableMultiset, g: float) -> list[float]:
     ]
 
 
-def initial_conditions(values: VariableSet) -> list[float]:
-    return values.to_list()
-
-
 def system(
     invars: list[float],
     n_segments: int,
-    initial_conditions: VariableSet,
     constraints: Callable[[VariableMultiset], list[float]],
     g: float,
 ) -> list[float]:
 
     variables = VariableMultiset().from_list(invars, n_segments + 1)
-    outvars = []
-    outvars.extend(initial_conditions.to_list())
+    outvars = [*constraints(variables)]
     for i in range(n_segments):
         outvars.extend(segment(i + 1, variables, g))
-    outvars.extend(constraints(variables))
-    print(outvars)
     return outvars
 
 
-def initialize_variable_multiset(
-    n_segments: int, initial_conditions: VariableSet
-) -> VariableMultiset:
+def initialize_variable_multiset(n_segments: int) -> VariableMultiset:
 
-    sets = [initial_conditions]
-    for _ in range(n_segments):
+    sets = []
+    for _ in range(n_segments + 1):
         sets.append(VariableSet())
     return VariableMultiset(*sets)
 
@@ -118,7 +108,6 @@ def initialize_variable_multiset(
 def construct_trajectory(
     n_segments: int,
     starting_values: VariableMultiset,
-    initial_conditions: VariableSet,
     constraints: Callable[[VariableMultiset], list[float]],
     g: float,
 ) -> VariableMultiset:
@@ -126,6 +115,6 @@ def construct_trajectory(
     result = opt.fsolve(
         system,
         starting_values.to_list(),
-        args=(n_segments, initial_conditions, constraints, g),
+        args=(n_segments, constraints, g),
     )
     return VariableMultiset.from_list(result, n_segments + 1)
