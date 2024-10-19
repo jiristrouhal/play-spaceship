@@ -1,4 +1,3 @@
-
 system_prompt = """
 You run in a loop of Thought, Action, PAUSE, Observation.
 At the end of the loop you output an Answer

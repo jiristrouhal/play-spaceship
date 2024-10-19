@@ -62,7 +62,7 @@ def read_state() -> State | None:
             rotation_speed=state["rotation-speed"],
             time=datetime.datetime.strptime(state["time"], "%Y-%m-%d %H:%M:%S"),
             g=state["gravity"],
-            time_slowdown=state["time-slowdown"]
+            time_slowdown=state["time-slowdown"],
         )
     except KeyError:
         return None
@@ -119,7 +119,7 @@ def wait_and_thrust(t_wait: float, t_burn: float) -> str:
 
     Returns in information string.
     """
-    wait(t_wait-1)
+    wait(t_wait - 1)
     return thrust(t_burn)
 
 
@@ -151,4 +151,3 @@ def _read_time(date_str: str) -> datetime.datetime | None:
     except ValueError:
         print("Error while parsing date string: ", date_str)
         return None
-
