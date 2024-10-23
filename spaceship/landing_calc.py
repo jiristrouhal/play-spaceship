@@ -12,9 +12,11 @@ class SuicideBurn:
     t_burn: float
 
 
-def calculate_landing() -> tuple[float, float]:
+def calculate_landing() -> tuple[float, float] | None:
     """Returns the time to wait before thrust and the time for which to thrust (both in seconds)."""
     state = read_state()
+    if state is None:
+        return None
     burn = _calculate_suicide_burn(state)
     return burn.t_wait * 0.9 - 1, burn.t_burn * 0.85
 
