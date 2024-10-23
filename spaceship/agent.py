@@ -50,8 +50,8 @@ def loop(agent: Agent, tools: dict[str, Callable], max_iterations: int = 20, que
 
 def _run_action_and_get_observation(tools: dict[str, Callable], action_prompt: str) -> str:
     action = re.findall(r"Action: ([a-z_]+): (\{.*\})", action_prompt, re.IGNORECASE)
-    if isinstance(action, list) and len(action)==1:
-        action.append('{}')
+    if isinstance(action, list) and len(action) == 1:
+        action.append("{}")
     if not action:
         next_prompt = "Observation: Unsuccesful action call"
     else:

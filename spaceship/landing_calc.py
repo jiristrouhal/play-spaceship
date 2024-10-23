@@ -1,9 +1,8 @@
 import dataclasses
 from math import sqrt
 import datetime
-import scipy.optimize as opt
 
-from actions import State, read_state
+from .actions import State, read_state
 
 
 @dataclasses.dataclass
