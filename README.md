@@ -1,5 +1,8 @@
+# Introduction
 
-# Usage
+A simple ReAct agent built from scratch, with a purpose to control and land a spaceship using a short list of tools to control the ship, read its state and verify the landing.
+
+# Setup
 
 ## Dependencies
 
@@ -23,7 +26,7 @@ git clone https://github.com/jiristrouhal/spaceship.git
 
 Create the following environment variables:
 
-```
+```bash
 OPENAI_API_KEY = "<your-openai-api-key>"
 SPACESHIP_GAME_PATH = "<game-path>"
 ```
@@ -36,3 +39,6 @@ Go to the root directory and run
 python3 -m spaceship
 ```
 
+The game window pops up and the agent starts controlling the spaceship using simulated keyboard presses.
+
+The game automatically closes after the landing is verified.
