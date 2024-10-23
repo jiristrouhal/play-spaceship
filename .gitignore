@@ -3,4 +3,4 @@ __pycache__
 .vscode
 *.pyc
 .env
-*.txt
+results.txt

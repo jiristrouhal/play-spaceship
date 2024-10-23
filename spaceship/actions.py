@@ -7,14 +7,24 @@ import json
 import datetime
 import dataclasses
 
+import dotenv
 import pyautogui
 
 
-GAME_PATH = "/home/jiri-strouhal/Plocha/Generative AI/Controlled/spaceship"
+try:
+    GAME_PATH = dotenv.dotenv_values()["SPACESHIP_GAME_PATH"]
+except Exception:
+    print("The GAME_PATH environment variable is not set.")
+    exit(1)
+
+
+assert GAME_PATH is not None
+GAME_SCRIPT_PATH = os.path.join(GAME_PATH, "game", "__main__.py")
+GAME_SPACESHIP_STATE_PATH = os.path.join(GAME_PATH, "game", "state.json")
 
 
 def _start_game():
-    subprocess.run(["python3", os.path.join(GAME_PATH, "game", "__main__.py")])
+    subprocess.run(["python3", GAME_SCRIPT_PATH])
 
 
 _start_time = datetime.datetime.now()
@@ -132,9 +142,8 @@ def _hold(seconds: float, key: Optional[str] = None):
 
 
 def _read_state() -> None | list:
-    file_path = os.path.join(GAME_PATH, "game", "state.json")
     try:
-        with open(file_path, "r") as file:
+        with open(GAME_SPACESHIP_STATE_PATH, "r") as file:
             state = json.loads(file.read())
             return state
     except FileNotFoundError:
