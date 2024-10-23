@@ -3,12 +3,10 @@ from typing import Callable
 from .prompts import system_prompt
 from .agent import loop, Agent
 from .actions import play, wait_and_thrust, has_landed, exit_game
-from .landing_calc import calculate_landing
 
 
 tools: dict[str, Callable] = {
     "wait_and_thrust": wait_and_thrust,
-    "calculate_landing": calculate_landing,
     "has_landed": has_landed,
 }
 
